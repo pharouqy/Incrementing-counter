@@ -1,4 +1,6 @@
-const counterName = document.querySelectorAll(".counter");
+////////// Method With setInterval & clearInterval //////////
+
+/*const counterName = document.querySelectorAll(".counter");
 let i = 0;
 let counter0 = setInterval(incremente0, 50);
 let counter1 = setInterval(incremente1,1);
@@ -21,4 +23,24 @@ function incremente2() {
   if (count2 === 789) {
     clearInterval(counter2);
   }
+}*/
+
+////////// Method With setTimeout & Recursion //////////
+
+const counterName = document.querySelectorAll(".counter");
+
+incremente();
+
+function incremente() {
+  counterName.forEach((element, index, arr) => {
+    let count = element.innerHTML++;
+    if (count === 5000 && index === 0) {
+      element.innerHTML = "5000";
+    } else if (count === 2500 && index === 1) {
+      element.innerHTML = "2500";
+    } else if (count === 3500 && index === 2) {
+      element.innerHTML = "3500";
+    }
+  });
+  setTimeout(incremente, 0);
 }
