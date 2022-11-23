@@ -1,7 +1,7 @@
 const counterName = document.querySelectorAll(".counter");
 let i = 0;
 let counter0 = setInterval(incremente0, 50);
-let counter1 = setInterval(incremente1, 25);
+let counter1 = setInterval(incremente1,1);
 let counter2 = setInterval(incremente2, 5);
 
 function incremente0() {
@@ -12,7 +12,7 @@ function incremente0() {
 }
 function incremente1() {
   let count1 = counterName[1].innerHTML++;
-  if (count1 === 3900) {
+  if (count1 === 3899) {
     clearInterval(counter1);
   }
 }
